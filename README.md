@@ -34,7 +34,7 @@ En la siguiente imagen se muestran los resultados de búsqueda de la palabara "S
     <b>Figura 1</b>. Resultados de búsqueda de la palabra "Selenium".
 </p>
 
-Como se puede apreciar en la figura anterior, el tercer resultado resaltado en color rojo corresponde a la página con título **"Herramientas de testing: introducción a Selenium"** en el sitio [Digital55].(https://www.digital55.com/desarrollo-tecnologia/herramientas-testing-introduccion-selenium/). Este sitio se muestra en la Figura 2.
+Como se puede apreciar en la figura anterior, el tercer resultado resaltado en color rojo corresponde a la página con título **"Herramientas de testing: introducción a Selenium"** en el sitio [Digital55](https://www.digital55.com/desarrollo-tecnologia/herramientas-testing-introduccion-selenium/). Este sitio se muestra en la Figura 2.
 
 <p align="center">
     <img src="doc/third_result.png"><br>
