@@ -15,12 +15,11 @@ describe('Prueba que accede al tercer vínculo no patrocinado de una búsqueda e
 
     it('Se busca el término "Selenium".', async function() {
         this.timeout(TIMEOUT);
-        var searchString = "Selenium";
         await driver.get("http://google.com");
-        await driver.findElement(By.name("q")).sendKeys(searchString, Key.RETURN);
+        await driver.findElement(By.name("q")).sendKeys("Selenium", Key.RETURN);
         var title = await driver.getTitle();
         await driver.wait(until.titleIs(title), 1000);
-        let element = await driver.findElement(By.xpath('//div[@class="hlcw0c" or @class="g"][3]')).click(); 
+        await driver.findElement(By.xpath('//div[@class="hlcw0c" or @class="g"][3]')).click(); 
     });
 
     after(async function() {
