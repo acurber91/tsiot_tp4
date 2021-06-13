@@ -1,0 +1,17 @@
+{
+  "name": "tp4",
+  "version": "1.0.0",
+  "description": "Trabajo Práctico Nº4 de la materia TSIoT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "author": "Agustin Curcio Berardi",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chromedriver": "^91.0.0",
+    "mocha": "^9.0.0",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  }
+}
