@@ -1,4 +1,5 @@
 const { Builder, By, until, Key } = require('selenium-webdriver');
+const { expect } = require('chai');
 require("chromedriver");
 var chrome = require('selenium-webdriver/chrome');
 
@@ -17,9 +18,13 @@ describe('Prueba que accede al tercer vínculo no patrocinado de una búsqueda e
         this.timeout(TIMEOUT);
         await driver.get("http://google.com");
         await driver.findElement(By.name("q")).sendKeys("Selenium", Key.RETURN);
-        var title = await driver.getTitle();
-        await driver.wait(until.titleIs(title), 1000);
-        await driver.findElement(By.xpath('//div[@class="hlcw0c" or @class="g"][3]')).click(); 
+        result = await driver.findElement(By.xpath('//div[@class="hlcw0c" or @class="g"][3]'));
+        full_text = await result.getText();
+        expected_text = full_text.substring(full_text.indexOf("\n") + 1).slice(1, 21);
+        await result.click();
+        actual_title = await driver.getTitle();
+        actual_text = actual_title.slice(0, 20);
+        expect(actual_text).to.equal(expected_text);
     });
 
     after(async function() {
